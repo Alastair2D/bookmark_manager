@@ -9,7 +9,7 @@ class Bkmk < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmarks = Bookmarks.prettify_bookmarks(Bookmarks.fetch_bookmarks)
+    @bookmarks = Bookmarks.fetch_bookmarks
     erb:index
   end
 
