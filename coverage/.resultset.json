@@ -11,6 +11,12 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/a1/makers/bookmark_manager/spec/features/viewing_bookmarks_features_spec.rb": [
@@ -43,6 +49,6 @@
         null
       ]
     },
-    "timestamp": 1535642529
+    "timestamp": 1535643910
   }
 }
