@@ -1,8 +1,11 @@
 require 'sinatra/base'
 require './lib/bookmarks'
+require 'sinatra/flash'
+require 'uri'
 
 class Bkmk < Sinatra::Base
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     'Hello world'
@@ -14,7 +17,11 @@ class Bkmk < Sinatra::Base
   end
 
   post '/bookmarks' do 
-    Bookmarks.create(params[:url])
+    if params[:url] =~ /\A#{URI::regexp(['http', 'https'])}\z/
+      Bookmarks.create(params[:url])
+    else
+      flash[:notice] = "Invalid URL format"
+    end
     redirect '/bookmarks'
   end
 

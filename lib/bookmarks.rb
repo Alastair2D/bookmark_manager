@@ -13,6 +13,7 @@ class Bookmarks
     db_connect.exec("INSERT INTO bookmarks (url) VALUES('#{url}')")
   end
 
+  
 
 
 end

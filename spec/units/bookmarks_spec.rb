@@ -12,4 +12,23 @@ describe Bookmarks do
       expect(bookmarks.fetch_bookmarks).not_to include 'website'
     end
   end
+
+  describe '#create' do
+    it 'adds new url to database table' do
+    add_bookmark_to_test_database
+    expect(bookmarks.fetch_bookmarks).to include 'http://www.makers.com'
+    end
+  end
+
+  describe '#create' do
+    it 'adds new url to database table' do
+    add_bookmark_to_test_database
+    expect(bookmarks.fetch_bookmarks).not_to include 'makers'
+    end
+    it 'does not create a new bookmark if the url is invalid' do
+      Bookmarks.create(url: 'shitty url')
+      expect(Bookmarks.fetch_bookmarks).not_to include 'shitty url' 
+    end
+  end
+
 end
