@@ -1,4 +1,5 @@
 require 'pg'
+require 'sinatra/flash'
 
 class Bookmarks
 
@@ -9,11 +10,17 @@ class Bookmarks
   end
   
   def self.create(url)
-    db_connect = PG.connect( dbname: "bookmark_manager#{ "_test" if ENV["RACK_ENV"] == "test" }") 
-    db_connect.exec("INSERT INTO bookmarks (url) VALUES('#{url}')")
-  end
+      return false unless check_valid?(url)
+      db_connect = PG.connect( dbname: "bookmark_manager#{ "_test" if ENV["RACK_ENV"] == "test" }") 
+      db_connect.exec("INSERT INTO bookmarks (url) VALUES('#{url}')")
+    end
 
-  
+
+# private
+
+  def self.check_valid?(url)
+    url =~ /\A#{URI::regexp(['http', 'https'])}\z/ 
+  end
 
 
 end

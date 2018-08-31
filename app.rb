@@ -17,11 +17,7 @@ class Bkmk < Sinatra::Base
   end
 
   post '/bookmarks' do 
-    if params[:url] =~ /\A#{URI::regexp(['http', 'https'])}\z/
-      Bookmarks.create(params[:url])
-    else
-      flash[:notice] = "Invalid URL format"
-    end
+    flash[:notice] = "Invalid URL format" unless Bookmarks.create(params[:url])
     redirect '/bookmarks'
   end
 

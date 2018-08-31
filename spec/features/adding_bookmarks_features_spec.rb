@@ -6,12 +6,6 @@ feature 'Bookmark Manager' do
     visit '/bookmarks'
     expect(page).to have_content 'makers'
   end
-  
-  scenario 'adds a bookmark to DB bookmark_manager\'s bookmark table without web helper' do
-    Bookmarks.create('testURL')
-    visit '/bookmarks'
-    expect(page).to have_content 'testURL'
-  end
 
   scenario 'adds a bookmark' do 
     visit '/bookmarks'
