@@ -14,7 +14,8 @@ class Bkmk < Sinatra::Base
   end
 
   post '/bookmarks' do 
-
+    Bookmarks.create(params[:url])
+    redirect '/bookmarks'
   end
 
   get '/add' do

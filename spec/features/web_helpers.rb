@@ -1,6 +1,6 @@
 def add_bookmark_to_test_database
   db_connnect = PG.connect( dbname: 'bookmark_manager_test')
-  db_connnect.exec("INSERT INTO bookmarks VALUES(1, 'makers')")
+  db_connnect.exec("INSERT INTO bookmarks (url) VALUES ('makers')")
 end
 
 def clear_test_database
