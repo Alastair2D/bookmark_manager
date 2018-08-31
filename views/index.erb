@@ -1,9 +1,10 @@
 <html>
 
   <% @bookmarks.each do |item| %>
-  <%= item %>
+  <%= item %> </br>
   <% end %>
 
+<br>
 <form action='/add' method='get'>
   <div>
     <input type='submit' name='add url' value='Add'>
