@@ -13,8 +13,15 @@ class Bkmk < Sinatra::Base
     erb:index
   end
 
+  post '/bookmarks' do 
+
+  end
+
+  get '/add' do
+    erb:add
+  end
+
 
   run! if app_file == $0
-
 
 end

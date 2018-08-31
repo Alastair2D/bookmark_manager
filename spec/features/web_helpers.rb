@@ -8,7 +8,7 @@ def clear_test_database
   db_clear = db_connnect.exec('DELETE FROM bookmarks')
 end
 
-def check_new_bookmark_added 
+def add_incorrectly_formatted_url 
   clear_test_database
   add_bookmark_to_test_database
-end  
+end

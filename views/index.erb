@@ -3,6 +3,12 @@
   <% @bookmarks.each do |item| %>
   <%= item %>
   <% end %>
-  
+
+<form action='/add' method='get'>
+  <div>
+    <input type='submit' name='add url' value='Add'>
+  </div>
+</form>
+
 </html>
 
