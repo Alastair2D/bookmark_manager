@@ -14,6 +14,14 @@
     </li>
     <% end %>
 </ul>
+
+<br>
+<form action='/bookmarks/new' method='get'>
+  <div>
+    <input type='submit' name='add url' value='Add'>
+  </div>
+</form>
+
 <h2>
   <%= flash[:notice] %>
 </h2>

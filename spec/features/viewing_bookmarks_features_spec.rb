@@ -1,4 +1,4 @@
-feature 'Viewing bookmarks' do
+feature 'Viewing' do
 
   feature 'visiting the homepage' do
     scenario 'the page title is visible' do

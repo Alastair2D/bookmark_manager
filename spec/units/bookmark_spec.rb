@@ -1,4 +1,3 @@
-
 require 'bookmark'
 
 describe Bookmark do

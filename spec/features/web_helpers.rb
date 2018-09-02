@@ -18,4 +18,3 @@ def add_correctly_formatted_bookmark_url_and_title_to_test_database
   db_connnect.exec("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}')")
 end
 
-

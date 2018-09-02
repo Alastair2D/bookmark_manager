@@ -3,26 +3,27 @@
     "coverage": {
       "/Users/a1/makers/bookmark_manager/spec/features/creating_bookmarks_features_spec.rb": [
         1,
+        null,
+        1,
         1,
         1,
         1,
         1,
         1,
         null,
-        1,
-        null,
         null,
         1,
         1,
         1,
         1,
-        null,
         1,
+        null,
         null,
         null
       ],
       "/Users/a1/makers/bookmark_manager/spec/features/deleting_a_bookmark_spec.rb": [
         1,
+        null,
         1,
         1,
         1,
@@ -81,7 +82,6 @@
         null
       ],
       "/Users/a1/makers/bookmark_manager/spec/units/bookmark_spec.rb": [
-        null,
         1,
         null,
         1,
@@ -156,8 +156,37 @@
         null,
         null,
         null
+      ],
+      "/Users/a1/makers/bookmark_manager/spec/units/database_connection_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1535904547
+    "timestamp": 1535907014
   }
 }
