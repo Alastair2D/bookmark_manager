@@ -6,12 +6,10 @@ Domain Model: <blockquote class="imgur-embed-pub" lang="en" data-id="a/iIwn0Za">
 
 [Diagram](https://imgur.com/a/iIwn0Za)
 
-The website will have the following specification:
+The application will have the following specification:
 -------------------------------------------------
-- S1. Show a list of bookmarks
+
 * US1. As a user, so I can go to a page I visit regularly, I would like to see a list of all bookmarks
-
-
 * US2. Add new bookmarks
 * US3.Delete bookmarks
 * US4. Update bookmarks

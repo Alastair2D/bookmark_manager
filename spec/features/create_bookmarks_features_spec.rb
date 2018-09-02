@@ -15,4 +15,13 @@ feature 'Bookmark Manager' do
     expect(page).to have_content 'http://www.url.com'
   end
 
+  scenario 'adds a bookmark' do 
+    visit '/bookmarks'
+    click_button 'Add'
+    fill_in 'url', with: 'http://www.url.com'
+    fill_in 'title', with: 'test title'
+    click_button 'Submit'
+    expect(page).to have_link('test title', href:'http://www.url.com')
+  end
+
 end
