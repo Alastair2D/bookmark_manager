@@ -1,10 +1,23 @@
-feature 'Bookmark Manager' do
+feature 'Viewing bookmarks' do
 
-  scenario 'shows a list of all saved bookmarks' do
-    clear_test_database
-    add_bookmark_to_test_database
-    visit '/bookmarks'
-    expect(page).to have_content 'makers'
+  feature 'visiting the homepage' do
+    scenario 'the page title is visible' do
+      visit '/'
+      expect(page).to have_content 'Bookmark Manager'
+    end
   end
-  
+
+  feature 'viewing bookmarks' do
+    scenario 'bookmarks are visible' do
+      Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+      Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'Destroy All Software')
+      Bookmark.create(url: 'http://www.google.com', title: 'Google')
+
+      visit '/bookmarks'
+
+      expect(page).to have_link('Makers Academy', href: 'http://www.makersacademy.com')
+      expect(page).to have_link('Destroy All Software',  href: 'http://www.destroyallsoftware.com')
+      expect(page).to have_link('Google', href: 'http://www.google.com')
+    end
+  end
 end
