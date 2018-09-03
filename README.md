@@ -4,6 +4,8 @@ Implemented using BDD with outside-in testing i.e. Capybara first
 
 [Domain Model](https://imgur.com/a/iIwn0Za)
 
+![Domain Model](https://github.com/Alastair2D/bookmark_manager/blob/master/images/bookmark_manager_domain_model_v2.png)
+
 The application will have the following specification:
 -------------------------------------------------
 
