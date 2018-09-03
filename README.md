@@ -4,6 +4,8 @@ Implemented using BDD with outside-in testing i.e. Capybara first
 
 [Domain Model](https://imgur.com/a/iIwn0Za)
 
+![untitled diagram](https://github.com/Alastair2D/bookmark_manager/blob/master/images/HTTP%20Request%20Response%20%2B%20MVC.png)
+
 The application will have the following specification:
 -------------------------------------------------
 
